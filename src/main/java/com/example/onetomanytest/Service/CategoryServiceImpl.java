@@ -7,10 +7,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
+    private final CategoryRepository categoryRepository;
 
+    public CategoryServiceImpl(CategoryRepository categoryRepository) {
+        this.categoryRepository = categoryRepository;
+    }
 
-
-    public Categoary save(Categoary category){
-        return null;
+    @Override
+    public Categoary save(Categoary category) {
+        return categoryRepository.save(category);
     }
 }
