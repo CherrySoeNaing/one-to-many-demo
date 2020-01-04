@@ -1,5 +1,7 @@
 package com.example.onetomanytest.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.Entity;
@@ -10,12 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class Categoary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    Private String name;
-
+    private String name;
 
 
 }
